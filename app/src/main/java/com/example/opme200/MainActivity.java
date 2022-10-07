@@ -27,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        auth = FirebaseAuth.getInstance();
+//        auth = FirebaseAuth.getInstance();
+//
+//        FragmentsAdaptor adaptor = new FragmentsAdaptor(getSupportFragmentManager());
+//        binding.viewPager.setAdapter(adaptor);
+//        binding.tabLayoutMain.setupWithViewPager(binding.viewPager);
 
-        FragmentsAdaptor adaptor = new FragmentsAdaptor(getSupportFragmentManager());
-        binding.viewPager.setAdapter(adaptor);
-        binding.tabLayoutMain.setupWithViewPager(binding.viewPager);
 
+        ////////////////Hello??????////////////////////////////////???????????????
 
 //        binding.viewPager.setAdapter(new FragmentsAdaptor(getSupportFragmentManager()));
 //        binding.tabLayoutMain.setupWithViewPager(binding.viewPager);
@@ -42,36 +44,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.setting:
-                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(i);
-                break;
-            case R.id.logout:
-                signOut();
-                break;
-            case R.id.groupChats:
-                Intent intent = new Intent(MainActivity.this, GroupChatsActivity.class);
-                startActivity(intent);
-                break;
-        }
-        return true;
-    }
-
-    private void signOut() {
-        auth.signOut();
-        Intent intent = new Intent(MainActivity.this, SignInActivity.class);
-        startActivity(intent);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater menuInflater = getMenuInflater();
+//        menuInflater.inflate(R.menu.menu, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
+//
+//
+//
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.setting:
+//                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+//                startActivity(i);
+//                break;
+//            case R.id.logout:
+//                signOut();
+//                break;
+//            case R.id.groupChats:
+//                Intent intent = new Intent(MainActivity.this, GroupChatsActivity.class);
+//                startActivity(intent);
+//                break;
+//        }
+//        return true;
+//    }
+//
+//    private void signOut() {
+//        auth.signOut();
+//        Intent intent = new Intent(MainActivity.this, SignInActivity.class);
+//        startActivity(intent);
+//    }
 }
